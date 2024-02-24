@@ -11,3 +11,7 @@ API context, useReducer, immer and more...
 
 # exec comandos
     - npm create vite@latest
+
+# install dependencies
+    - npm i styled-components
+    - npm i @types/styled-components -D
