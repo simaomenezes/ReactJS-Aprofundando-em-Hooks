@@ -11,7 +11,11 @@ API context, useReducer, immer and more...
 
 # exec comandos
     - npm create vite@latest
+    - npx eslint src --ext .ts,.tsx --fix
 
 # install dependencies
     - npm i styled-components
     - npm i @types/styled-components -D
+    - npm i eslint -D
+    - npm i @rocketseat/eslint-config -D
+
