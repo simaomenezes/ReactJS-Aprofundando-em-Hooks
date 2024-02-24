@@ -18,6 +18,7 @@ API context, useReducer, immer and more...
     - npm i @types/styled-components -D
     - npm i eslint -D
     - npm i @rocketseat/eslint-config -D
+    - npm i react-router-dom
 
 
 # Branchs 
