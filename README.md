@@ -19,3 +19,12 @@ API context, useReducer, immer and more...
     - npm i eslint -D
     - npm i @rocketseat/eslint-config -D
 
+
+# Branchs 
+    - develop = Estrutura da Aplicação
+    - RoutesAndPages
+    - Forms
+    - FeaturesOfApplication
+    - ReactContext
+    - Reducers
+
