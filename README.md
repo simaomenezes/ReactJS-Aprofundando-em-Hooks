@@ -20,6 +20,7 @@ API context, useReducer, immer and more...
     - npm i @rocketseat/eslint-config -D
     - npm i react-router-dom
     - npm i phosphor-react
+    - npm i react-hook-form
 
 
 # Branchs 
