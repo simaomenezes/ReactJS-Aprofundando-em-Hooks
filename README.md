@@ -22,6 +22,10 @@ API context, useReducer, immer and more...
     - npm i phosphor-react
     - npm i react-hook-form
 
+    Validate to the form
+        - npm i zod
+        - npm i @hookform/resolvers
+
 
 # Branchs 
     - develop = Estrutura da Aplicação
