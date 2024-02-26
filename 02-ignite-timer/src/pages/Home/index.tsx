@@ -5,16 +5,13 @@ import { useEffect, useState } from 'react'
 import * as zod from 'zod'
 
 import {
-  CountDownContainer,
-  FormContainer,
   HomeContainer,
-  MinutesAmmountInput,
-  Separator,
   StartCountdownButton,
   StopCountdownButton,
-  TaskInput,
 } from './styles'
 import { differenceInSeconds } from 'date-fns'
+import { NewCycleForm } from './components/NewCycleForm'
+import { Countdown } from './components/Countdown'
 
 const newCycleFormValidationSchema = zod.object({
   task: zod.string().min(1, 'Are you should info the task?'),
@@ -129,48 +126,8 @@ export function Home() {
   return (
     <HomeContainer>
       <form onSubmit={handleSubmit(handleCreateNewCycle)} action="">
-        <FormContainer>
-          <label htmlFor="task">I will work in</label>
-          <TaskInput
-            list="task-suggestions"
-            type="text"
-            id="task"
-            placeholder="Do you should insert same thing"
-            {...register('task')}
-            disabled={!!activeCycle}
-          />
-
-          <datalist id="task-suggestions">
-            <option value="Project 1" />
-            <option value="Project 3" />
-            <option value="Project 4" />
-            <option value="Project 2" />
-            <option value="Other things" />
-          </datalist>
-
-          <label htmlFor="minutesAmmount">Duration</label>
-          <MinutesAmmountInput
-            type="number"
-            id="minutesAmmount"
-            placeholder="0:0"
-            step={5}
-            min={5}
-            max={60}
-            disabled={!!activeCycle}
-            {...register('minutesAmmount', { valueAsNumber: true })}
-          />
-
-          <span>minutes.</span>
-        </FormContainer>
-
-        <CountDownContainer>
-          <span>{minutes[0]}</span>
-          <span>{minutes[1]}</span>
-          <Separator>:</Separator>
-          <span>{seconds[0]}</span>
-          <span>{seconds[1]}</span>
-        </CountDownContainer>
-
+        <NewCycleForm />
+        <Countdown />
         {activeCycle ? (
           <StopCountdownButton onClick={handleInterruptCycle} type="button">
             <HandPalm size={24} />
