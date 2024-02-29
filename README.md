@@ -21,7 +21,8 @@ API context, useReducer, immer and more...
     - npm i react-router-dom
     - npm i phosphor-react
     - npm i react-hook-form
-    - npm i date-fns 
+    - npm i date-fns
+    - npm i immer
 
     Validate to the form
         - npm i zod
