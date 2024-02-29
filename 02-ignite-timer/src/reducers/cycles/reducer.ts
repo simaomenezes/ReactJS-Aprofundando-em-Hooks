@@ -1,4 +1,4 @@
-import { isDraft, produce } from 'immer'
+import { produce } from 'immer'
 import { ActionTypes } from './actions'
 
 export interface Cycle {
@@ -22,6 +22,7 @@ export function cyclesReducer(state: CycleState, action: any) {
         draft.cycles.push(action.payload.newCycle)
         draft.activeCycleId = action.payload.newCycle.id
       })
+
     case ActionTypes.INTERRUPT_CURRENT_CYCLE: {
       const currentCycleIndex = state.cycles.findIndex((cycle) => {
         return cycle.id === state.activeCycleId
